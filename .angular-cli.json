@@ -24,7 +24,8 @@
       ],
       "scripts": [
         "assets/js/jquery/jquery-2.2.4.min.js",
-        "../node_modules/bootstrap/dist/js/bootstrap.min.js"
+        "../node_modules/bootstrap/dist/js/bootstrap.min.js",
+        "../node_modules/bootbox/bootbox.js"
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {
