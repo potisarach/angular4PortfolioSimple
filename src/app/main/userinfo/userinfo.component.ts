@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { UserService } from '../../shared/user.service';
 import { BaseComponent } from '../../baseComponent';
 declare var $:any;
 @Component({
