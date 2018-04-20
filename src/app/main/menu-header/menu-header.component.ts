@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { BaseComponent } from '../../baseComponent';
+import { UserModel } from '../../shared/user.model';
 
 @Component({
   selector: 'app-menu-header',
@@ -9,8 +10,8 @@ import { BaseComponent } from '../../baseComponent';
 })
 export class MenuHeaderComponent extends BaseComponent implements OnInit {
   public headerTitle: string = 'My Portfolio';
-  constructor(private route: Router) { 
-    super();
+  constructor(private user: UserModel, private route: Router) { 
+    super(user);
   }
 
   ngOnInit() {

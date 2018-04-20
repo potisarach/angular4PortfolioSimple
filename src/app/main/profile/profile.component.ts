@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BaseComponent } from '../../baseComponent';
+import { UserModel } from '../../shared/user.model';
 
 @Component({
   selector: 'app-profile',
@@ -8,8 +9,8 @@ import { BaseComponent } from '../../baseComponent';
 })
 export class ProfileComponent extends BaseComponent implements OnInit {
 
-  constructor() {
-    super();
+  constructor(private user: UserModel) {
+    super(user);
    }
 
   ngOnInit() {

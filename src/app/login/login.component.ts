@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { Http, RequestOptions, Headers } from "@angular/http";
 import 'rxjs/add/operator/map'
 import { BaseComponent } from '../baseComponent';
+import { UserModel } from '../shared/user.model';
 declare var bootbox:any;
 @Component({
   selector: 'app-login',
@@ -13,8 +14,8 @@ export class LoginComponent extends BaseComponent implements OnInit {
   private loginPath = this._CONF.SERVER_API + 'login';
   public username: string;
   public password: string;;
-  constructor(private http: Http,  private route: Router) {
-    super();
+  constructor(private user: UserModel, private http: Http,  private route: Router) {
+    super(user);
    }
 
   ngOnInit() {
@@ -45,7 +46,6 @@ export class LoginComponent extends BaseComponent implements OnInit {
     this.route.navigate(['/']);
   }
   onError(err){
-    //alert('Users not found with Email or incorrect');
     bootbox.alert('Users not found with Email or incorrect');
   }
 }
