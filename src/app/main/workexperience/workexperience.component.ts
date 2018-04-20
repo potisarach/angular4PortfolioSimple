@@ -18,5 +18,9 @@ export class WorkexperienceComponent extends BaseComponent implements OnInit {
 
     $('#expFormModal').modal();
   }
+  editExperien(){
+    
+        $('#expFormModal').modal();
+      }
 
 }
