@@ -12,18 +12,21 @@
               <input type="text" [(ngModel)]="position" class="form-control" placeholder="Enter Position Name">
             </div>           
           </div>
+          <p></p>
           <div class="row">
               <div class="col-md-12">
                 <label>ตำแหน่ง</label>
                 <input type="text" [(ngModel)]="company" class="form-control" placeholder="Enter Company Name">
               </div>             
           </div>
+          <p></p>
           <div class="row">
               <div class="col-md-12">
                 <label>ตำแหน่งที่ตั้ง</label>
                 <input type="text" [(ngModel)]="address" class="form-control" placeholder="Enter Address Name">
               </div>             
           </div>
+          <p></p>
           <div class="row">
               <div class="col-md-12">
                 <label>ตั้งแต่</label>
@@ -43,12 +46,21 @@
                 </select>
               </div>             
           </div>
+          <p></p>
           <div class="row">
               <div class="col-md-12">
                 <label>ปี</label>
                 <select id="selectYear" style="width:auto;" class="form-control selectWidth">
                     <option *ngFor="let item of arrays" class="">{{item}}</option>
                 </select>
+              </div>             
+          </div>
+          <p></p>
+          <div class="row">
+              <div class="col-md-12">
+                <label>คำอธิบาย</label>
+                <!-- <input type="text" [(ngModel)]="address" class="form-control" placeholder="Enter Address Name"> -->
+                <textarea class="form-control" rows="3"></textarea>
               </div>             
           </div>
         </div>
