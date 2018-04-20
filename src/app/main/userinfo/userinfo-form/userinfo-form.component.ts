@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BaseComponent } from '../../../baseComponent';
 import { Http, Headers, RequestOptions} from '@angular/http';
+import { UserModel } from '../../../shared/user.model';
 declare var bootbox:any;
 declare var $:any;
 @Component({
@@ -18,8 +19,8 @@ export class UserinfoFormComponent extends BaseComponent implements OnInit {
   public email: string;
   public address: string;
   private pathUpdate = this._CONF.SERVER_API + "/users/"+this.user.userId;
-  constructor(private http: Http) { 
-    super();
+  constructor(private user: UserModel,private http: Http) { 
+    super(user);
     
     this.firstname = this.user.firstname;
     this.lastname = this.user.lastname;
