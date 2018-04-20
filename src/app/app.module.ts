@@ -46,7 +46,8 @@ import { UserModel } from './shared/user.model';
     AppRoutingModule,
     HttpModule
   ],
-  providers: [AuthGuard, UserModel],
+  providers: [UserModel, AuthGuard],
+  
   bootstrap: [AppComponent]
 })
 export class AppModule { }

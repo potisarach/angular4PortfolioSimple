@@ -1,4 +1,4 @@
-import { Injectable } from "@angular/core";
+import { Injectable } from '@angular/core';
 
 @Injectable()
 export class UserModel {
@@ -15,9 +15,4 @@ export class UserModel {
   public address: string;
   public roleId: string;
   public isactive: string;
-
-  constructor() {
-    
-  }
-
 }
