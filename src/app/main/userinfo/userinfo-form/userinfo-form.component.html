@@ -16,26 +16,26 @@
         <br>
         <div class="row">
           <div class="col-md-6">
-            <label for="firstName">ชื่อ</label>
-            <input type="text" class="form-control" placeholder="Enter First Name" name="firstName">
+            <label>ชื่อ</label>
+            <input type="text" ([ngModel])="firstname" class="form-control" placeholder="Enter First Name">
           </div>
           <div class="col-md-6">
-            <label for="lastName">นามสกุล</label>
-            <input type="text" class="form-control" placeholder="Enter Last Name" name="lastName">
+            <label>นามสกุล</label>
+            <input type="text" ([ngModel])="lastname" class="form-control" placeholder="Enter Last Name">
           </div>
         </div>
         <br>
         <div class="row">
           <div class="col-md-12">
-            <label for="introduce">ข้อความแนะนำ</label>
-            <input type="text" class="form-control" placeholder="Enter introduce" name="introduce">
+            <label>ข้อความแนะนำ</label>
+            <input type="text" ([ngModel])="introduce" class="form-control" placeholder="Enter introduce">
           </div>
         </div>
         <br>
         <div class="row">
           <div class="col-md-12">
-            <label for="titleName">ตำแหน่งปัจจุบัน</label>
-            <input type="text" class="form-control" placeholder="Enter titleName" name="titleName">
+            <label>ตำแหน่งปัจจุบัน</label>
+            <input type="text" ([ngModel])="titlename" class="form-control" placeholder="Enter Title Name">
           </div>
         </div>
       </div>
