@@ -28,8 +28,7 @@ export class UserinfoFormComponent extends BaseComponent implements OnInit {
   }
 
   onSave(){
-    let headobj = { 'Content-Type': 'application/json' };
-    let headers = new Headers(headobj);
+    let headers = new Headers({'Content-Type': 'application/json'});
     let options = new RequestOptions({ headers: headers, method: "put" });
     let parameter = {};
     this.http.put(this.pathUpdate, parameter, options)
