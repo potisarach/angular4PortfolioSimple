@@ -18,7 +18,7 @@ export class UserinfoFormComponent extends BaseComponent implements OnInit {
   public picProfile: string;
   public email: string;
   public address: string;
-  private pathUpdate = this._CONF.SERVER_API + "/users/"+this.user.userId;
+  private pathUpdate = this._CONF.SERVER_API + "users/";
   constructor(public user: UserModel,private http: Http) { 
     super();
     
@@ -30,6 +30,7 @@ export class UserinfoFormComponent extends BaseComponent implements OnInit {
   bindModal(){
     $('#userinfoFormModal').on('show.bs.modal', (e)=>{
       console.log(this.user);
+      this.user = JSON.parse(localStorage.getItem('user'));
       this.firstname = this.user.firstname;
       this.lastname = this.user.lastname;
       this.introduce = this.user.introduce;
@@ -37,6 +38,7 @@ export class UserinfoFormComponent extends BaseComponent implements OnInit {
       this.picProfile = this.user.picProfile;
       this.email = this.user.email;
       this.address = this.user.address;
+      this.pathUpdate += this.user.userId
     });
   }
   onSave(){

@@ -11,6 +11,7 @@ export class MenuLeftComponent extends BaseComponent implements OnInit {
 
   constructor(public user: UserModel) {
     super();
+    this.user = JSON.parse(localStorage.getItem('user'));
    }
 
   ngOnInit() {

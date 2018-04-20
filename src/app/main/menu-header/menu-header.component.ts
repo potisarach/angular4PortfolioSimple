@@ -12,6 +12,7 @@ export class MenuHeaderComponent extends BaseComponent implements OnInit {
   public headerTitle: string = 'My Portfolio';
   constructor(public user: UserModel, private route: Router) { 
     super();
+    this.user = JSON.parse(localStorage.getItem('user'));
   }
 
   ngOnInit() {
