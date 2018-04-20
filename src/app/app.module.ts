@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import 'rxjs/add/operator/map';
 
@@ -38,6 +39,7 @@ import { SkillsFormComponent } from './main/skills/skills-form/skills-form.compo
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     HttpModule
   ],

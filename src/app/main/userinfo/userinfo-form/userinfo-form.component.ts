@@ -23,7 +23,7 @@ export class UserinfoFormComponent extends BaseComponent implements OnInit {
 
   }
   ngOnInit() {
-
+    console.log(this.user);
   }
 
 }
