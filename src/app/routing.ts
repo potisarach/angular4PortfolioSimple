@@ -5,6 +5,7 @@ import { LoginComponent } from "./login/login.component";
 import { AuthGuard } from "./shared/auth.guard";
 import { PageNotfoundComponent } from "./page-notfound/page-notfound.component";
 import { ProfileComponent } from "./main/profile/profile.component";
+import { SkillsComponent } from "./main/skills/skills.component";
 
 @NgModule({
     imports: [

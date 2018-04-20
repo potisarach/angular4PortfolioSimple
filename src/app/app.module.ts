@@ -16,6 +16,7 @@ import { WorkexperienceComponent } from './main/workexperience/workexperience.co
 import { EducationComponent } from './main/education/education.component';
 import { UserinfoComponent } from './main/userinfo/userinfo.component';
 import { UserinfoFormComponent } from './main/userinfo/userinfo-form/userinfo-form.component';
+import { SkillsComponent } from './main/skills/skills.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { UserinfoFormComponent } from './main/userinfo/userinfo-form/userinfo-fo
     EducationComponent,
     UserinfoComponent,
     UserinfoFormComponent,
+    SkillsComponent,
     
   ],
   imports: [
