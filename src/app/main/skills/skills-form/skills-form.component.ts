@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { BaseComponent } from '../../../baseComponent';
+import { UserModel } from '../../../shared/user.model';
 declare var $:any;
 @Component({
   selector: 'app-skills-form',
@@ -11,7 +12,7 @@ export class SkillsFormComponent extends BaseComponent implements OnInit {
   @Input() action: string;
   public skill_name: string;
 
-  constructor() { 
+  constructor(public user: UserModel) { 
     super();
 
     this.skill_name = "MVC";

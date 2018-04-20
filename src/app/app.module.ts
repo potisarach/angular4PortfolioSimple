@@ -20,6 +20,7 @@ import { UserinfoFormComponent } from './main/userinfo/userinfo-form/userinfo-fo
 import { SkillsComponent } from './main/skills/skills.component';
 import { SkillsFormComponent } from './main/skills/skills-form/skills-form.component';
 import { WorkexperienceFormComponent } from './main/workexperience/workexperience-form/workexperience-form.component';
+import { UserModel } from './shared/user.model';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,7 @@ import { WorkexperienceFormComponent } from './main/workexperience/workexperienc
     AppRoutingModule,
     HttpModule
   ],
-  providers: [AuthGuard],
+  providers: [AuthGuard, UserModel],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BaseComponent } from '../../baseComponent';
+import { UserModel } from '../../shared/user.model';
 declare var $:any;
 @Component({
   selector: 'app-skills',
@@ -9,7 +10,7 @@ declare var $:any;
 export class SkillsComponent extends BaseComponent implements OnInit {
 
   public action: string;
-  constructor() {
+  constructor(public user: UserModel) {
     super();
    }
 

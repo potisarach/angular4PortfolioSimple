@@ -14,8 +14,8 @@ export class LoginComponent extends BaseComponent implements OnInit {
   private loginPath = this._CONF.SERVER_API + 'login';
   public username: string;
   public password: string;;
-  constructor(private user: UserModel, private http: Http,  private route: Router) {
-    super(user);
+  constructor(public user: UserModel, private http: Http,  private route: Router) {
+    super();
    }
 
   ngOnInit() {
@@ -40,6 +40,7 @@ export class LoginComponent extends BaseComponent implements OnInit {
 
   saveStorage(data){
     console.log("LOGIN RETURN",data)
+    this.user = data; 
     let dataUser = JSON.stringify(data);
     localStorage.setItem('isLoggedin', 'true');
     localStorage.setItem('user', dataUser);

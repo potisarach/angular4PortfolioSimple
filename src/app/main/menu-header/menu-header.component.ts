@@ -10,8 +10,8 @@ import { UserModel } from '../../shared/user.model';
 })
 export class MenuHeaderComponent extends BaseComponent implements OnInit {
   public headerTitle: string = 'My Portfolio';
-  constructor(private user: UserModel, private route: Router) { 
-    super(user);
+  constructor(public user: UserModel, private route: Router) { 
+    super();
   }
 
   ngOnInit() {

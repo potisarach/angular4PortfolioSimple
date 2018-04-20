@@ -9,8 +9,8 @@ import { UserModel } from '../../shared/user.model';
 })
 export class MenuLeftComponent extends BaseComponent implements OnInit {
 
-  constructor(private user: UserModel) {
-    super(user);
+  constructor(public user: UserModel) {
+    super();
    }
 
   ngOnInit() {

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Injector } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -8,8 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit{
  
   title = 'app';
-  constructor(){
-    
+  static injector: Injector;
+  constructor(injector: Injector) {
+    AppComponent.injector = injector;
   }
   ngOnInit(): void {
 

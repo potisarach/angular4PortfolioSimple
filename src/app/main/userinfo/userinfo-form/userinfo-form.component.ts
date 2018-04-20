@@ -19,28 +19,32 @@ export class UserinfoFormComponent extends BaseComponent implements OnInit {
   public email: string;
   public address: string;
   private pathUpdate = this._CONF.SERVER_API + "/users/"+this.user.userId;
-  constructor(private user: UserModel,private http: Http) { 
-    super(user);
+  constructor(public user: UserModel,private http: Http) { 
+    super();
     
-    this.firstname = this.user.firstname;
-    this.lastname = this.user.lastname;
-    this.introduce = this.user.introduce;
-    this.titlename = this.user.titlename;
-    this.picProfile = this.user.picProfile;
-    this.email = this.user.email;
-    this.address = this.user.address;
-
   }
   ngOnInit() {
     console.log(this.user);
+    this.bindModal();
   }
-
+  bindModal(){
+    $('#userinfoFormModal').on('show.bs.modal', (e)=>{
+      console.log(this.user);
+      this.firstname = this.user.firstname;
+      this.lastname = this.user.lastname;
+      this.introduce = this.user.introduce;
+      this.titlename = this.user.titlename;
+      this.picProfile = this.user.picProfile;
+      this.email = this.user.email;
+      this.address = this.user.address;
+    });
+  }
   onSave(){
     let headers = new Headers({'Content-Type': 'application/json'});
     let options = new RequestOptions({ headers: headers, method: "put" });
     let parameter = {
 
-        "userId": 2, 
+        "userId": this.user.userId, 
         "firstname": this.firstname, 
         "lastname": this.lastname, 
         "introduce": this.introduce, 
