@@ -1,0 +1,29 @@
+.header{
+    width: 100%;
+    height: 60px;
+    background-color: #febf00;
+    position: fixed;
+    z-index: 50;
+    top: 0;
+    left: 0;
+    padding: 5px;
+}
+.header-right {
+    padding-top: 10px;
+}
+.header-right > .username{
+    font-weight: bold;
+    color: white;
+}
+.header-right > a{
+    cursor: pointer;
+    color: #0004ff;
+    margin-left: 10px;
+}
+.header-center{
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+    padding-top: 6px;
+}
+

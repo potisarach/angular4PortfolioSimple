@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files */
+a{
+    cursor: pointer;
+}
+body{
+    background-color: #dddddd;
+}
+.card{
+    border: 1px solid #a9acb6;
+    border-radius: 4px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #FFF;
+}
+.card .action{
+    font-size: 22px;
+    float: right;
+}

@@ -1,0 +1,43 @@
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { HttpModule } from '@angular/http';
+import 'rxjs/add/operator/map';
+
+import { AppComponent } from './app.component';
+import { MainComponent } from './main/main.component';
+import { AppRoutingModule } from './routing';
+import { MenuLeftComponent } from './main/menu-left/menu-left.component';
+import { MenuHeaderComponent } from './main/menu-header/menu-header.component';
+import { LoginComponent } from './login/login.component';
+import { AuthGuard } from './shared/auth.guard';
+import { PageNotfoundComponent } from './page-notfound/page-notfound.component';
+import { ProfileComponent } from './main/profile/profile.component';
+import { WorkexperienceComponent } from './main/workexperience/workexperience.component';
+import { EducationComponent } from './main/education/education.component';
+import { UserinfoComponent } from './main/userinfo/userinfo.component';
+import { UserinfoFormComponent } from './main/userinfo/userinfo-form/userinfo-form.component';
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    MainComponent,
+    MenuLeftComponent,
+    MenuHeaderComponent,
+    LoginComponent,
+    PageNotfoundComponent,
+    ProfileComponent,
+    WorkexperienceComponent,
+    EducationComponent,
+    UserinfoComponent,
+    UserinfoFormComponent,
+    
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpModule
+  ],
+  providers: [AuthGuard],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
