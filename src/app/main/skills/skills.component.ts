@@ -8,6 +8,7 @@ declare var $:any;
 })
 export class SkillsComponent extends BaseComponent implements OnInit {
 
+  public action: string;
   constructor() {
     super();
    }
@@ -15,7 +16,15 @@ export class SkillsComponent extends BaseComponent implements OnInit {
   ngOnInit() {
   }
   addSkills(){
+    this.action = 'add';
     $('#skillFormModal').modal();
+  }
+  editSkills(){
+    this.action = 'edit';
+    $('#skillFormModal').modal();
+  }
+  deleteSkills(){
+    $('#deleteSkillFormModal').modal();
   }
 
 }

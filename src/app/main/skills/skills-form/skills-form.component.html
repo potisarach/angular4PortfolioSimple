@@ -9,7 +9,30 @@
           <div class="row">
             <div class="col-md-12">
               <label>ชื่อทักษะ</label>
-              <input type="text" ([ngModel])="skill_name" class="form-control" placeholder="Enter Skill Name">
+              <input type="text" [(ngModel)]="skill_name" class="form-control" placeholder="Enter Skill Name">
+            </div>
+            
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+<div class="modal fade" id="deleteSkillFormModal" tabindex="-1" role="dialog" aria-labelledby="deleteSkillFormModal" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" >ลบข้อมูลทักษะ</h4>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-12">
+              <h3>ต้องการลบข้อมูลนี้ใช่หรือไม่?</h3>
             </div>
             
           </div>
