@@ -2,8 +2,8 @@
   <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
   <div class="user-info text-center">
     <img  class="img-circle img-user-info" src="../../assets/images/avatar5.png">
-    <div class="fullname">Somsak Siam</div>
-    <div class="title">Software Engineer</div>
+    <div class="fullname">{{getFullName()}}</div>
+    <div class="title">{{user.introduce}}</div>
   </div>
   <a routerLink="/">Main</a>
   <a routerLink="profile">Profile</a>

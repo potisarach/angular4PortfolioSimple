@@ -1,13 +1,16 @@
 import { Component, OnInit } from '@angular/core';
+import { BaseComponent } from '../../baseComponent';
 
 @Component({
   selector: 'app-menu-left',
   templateUrl: './menu-left.component.html',
   styleUrls: ['./menu-left.component.css']
 })
-export class MenuLeftComponent implements OnInit {
+export class MenuLeftComponent extends BaseComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+    super();
+   }
 
   ngOnInit() {
   }
