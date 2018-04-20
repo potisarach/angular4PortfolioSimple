@@ -1,3 +1,61 @@
-<p>
-  workexperience-form works!
-</p>
+<!-- Modal -->
+<div class="modal fade" id="expFormModal" tabindex="-1" role="dialog" aria-labelledby="expFormModal" aria-hidden="true">
+    <div class="modal-dialog " role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" >ประสบการณ์</h4>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-12">
+              <label>บริษัท</label>
+              <input type="text" [(ngModel)]="position" class="form-control" placeholder="Enter Position Name">
+            </div>           
+          </div>
+          <div class="row">
+              <div class="col-md-12">
+                <label>ตำแหน่ง</label>
+                <input type="text" [(ngModel)]="company" class="form-control" placeholder="Enter Company Name">
+              </div>             
+          </div>
+          <div class="row">
+              <div class="col-md-12">
+                <label>ตำแหน่งที่ตั้ง</label>
+                <input type="text" [(ngModel)]="address" class="form-control" placeholder="Enter Address Name">
+              </div>             
+          </div>
+          <div class="row">
+              <div class="col-md-12">
+                <label>ตั้งแต่</label>
+                <select id="selectMonth" style="width:auto;" class="form-control selectWidth">
+                    <option class="">มกราคม</option>
+                    <option class="">กุมภาพันธ์</option>
+                    <option class="">มีนาคม</option>
+                    <option class="">เมษายน</option>
+                    <option class="">พฤษภาคม</option>
+                    <option class="">มิถุนายน</option>
+                    <option class="">กรกฎาคม</option>
+                    <option class="">สิงหาคม</option>
+                    <option class="">กันยายน</option>
+                    <option class="">ตุลาคม</option>
+                    <option class="">พฤศจิกายน</option>
+                    <option class="">ธันวาคม</option>
+                </select>
+              </div>             
+          </div>
+          <div class="row">
+              <div class="col-md-12">
+                <label>ปี</label>
+                <select id="selectYear" style="width:auto;" class="form-control selectWidth">
+                    <option *ngFor="let item of arrays" class="">{{item}}</option>
+                </select>
+              </div>             
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
