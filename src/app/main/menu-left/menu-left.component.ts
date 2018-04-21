@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BaseComponent } from '../../baseComponent';
 import { UserModel } from '../../shared/user.model';
+import { UserService } from '../../shared/user.service';
 
 @Component({
   selector: 'app-menu-left',
@@ -9,22 +10,20 @@ import { UserModel } from '../../shared/user.model';
 })
 export class MenuLeftComponent extends BaseComponent implements OnInit {
 
-  constructor(public user: UserModel) {
+  constructor(public userService: UserService) {
     super();
-    this.user = JSON.parse(localStorage.getItem('user'));
    }
 
   ngOnInit() {
+    
   }
 
   openNav() {
     document.getElementById("mySidenav").style.width = "250px";
-    //document.getElementById("container").style.marginLeft = "250px";
   }
 
   closeNav() {
     document.getElementById("mySidenav").style.width = "0";
-   // document.getElementById("container").style.marginLeft = "0";
   }
 
 }

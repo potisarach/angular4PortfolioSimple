@@ -9,7 +9,7 @@ import { UserModel } from '../../shared/user.model';
 })
 export class ProfileComponent extends BaseComponent implements OnInit {
 
-  constructor(public user: UserModel) {
+  constructor() {
     super();
    }
 

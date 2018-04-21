@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BaseComponent } from '../../../baseComponent';
 import { Http, Headers, RequestOptions} from '@angular/http';
-import { UserModel } from '../../../shared/user.model';
+import { UserService } from '../../../shared/user.service';
 declare var bootbox:any;
 declare var $:any;
 @Component({
@@ -9,17 +9,11 @@ declare var $:any;
   templateUrl: './userinfo-form.component.html',
   styleUrls: ['./userinfo-form.component.css']
 })
+
 export class UserinfoFormComponent extends BaseComponent implements OnInit {
 
-  public firstname: string;
-  public lastname: string;
-  public introduce: string;
-  public titlename: string;
-  public picProfile: string;
-  public email: string;
-  public address: string;
   private pathUpdate = this._CONF.SERVER_API + "users/";
-  constructor(public user: UserModel,private http: Http) { 
+  constructor(private http: Http, private userService: UserService) { 
     super();
     
   }
@@ -28,18 +22,9 @@ export class UserinfoFormComponent extends BaseComponent implements OnInit {
     this.bindModal();
   }
   bindModal(){
-    $('#userinfoFormModal').on('show.bs.modal', (e)=>{
-      console.log(this.user);
-      this.user = JSON.parse(localStorage.getItem('user'));
-      this.firstname = this.user.firstname;
-      this.lastname = this.user.lastname;
-      this.introduce = this.user.introduce;
-      this.titlename = this.user.titlename;
-      this.picProfile = this.user.picProfile;
-      this.email = this.user.email;
-      this.address = this.user.address;
-      this.pathUpdate += this.user.userId
-    });
+    // $('#userinfoFormModal').on('show.bs.modal', (e)=>{
+    //   console.log(this.user);
+    // });
   }
   onSave(){
     let headers = new Headers({'Content-Type': 'application/json'});
@@ -47,17 +32,17 @@ export class UserinfoFormComponent extends BaseComponent implements OnInit {
     let parameter = {
 
         "userId": this.user.userId, 
-        "firstname": this.firstname, 
-        "lastname": this.lastname, 
-        "introduce": this.introduce, 
-        "titlename": this.titlename,
-        "email": this.email, 
-        "address": this.address
+        "firstname": this.user.firstname, 
+        "lastname": this.user.lastname, 
+        "introduce": this.user.introduce, 
+        "titlename": this.user.titlename,
+        "email": this.user.email, 
+        "address": this.user.address
 
       };
 
     console.log('parameter', parameter);
-    this.http.put(this.pathUpdate, parameter, options)
+    this.http.put(this.pathUpdate + this.user.userId, parameter, options)
     .map(res => res.json())
     .subscribe(
     data => this.onSuccess(data),
@@ -72,6 +57,7 @@ export class UserinfoFormComponent extends BaseComponent implements OnInit {
     let dataUser = JSON.stringify(data);
     localStorage.setItem('user', dataUser);
     bootbox.alert('Successed.');
+    this.userService.data.next(data);
   }
 
   onError(err){

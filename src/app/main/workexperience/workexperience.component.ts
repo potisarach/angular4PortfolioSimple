@@ -9,7 +9,7 @@ declare var $:any;
 })
 export class WorkexperienceComponent extends BaseComponent implements OnInit {
   public action: string;
-  constructor(public user: UserModel) {
+  constructor() {
     super();
    }
 

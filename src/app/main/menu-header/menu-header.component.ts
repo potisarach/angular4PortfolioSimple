@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { BaseComponent } from '../../baseComponent';
-import { UserModel } from '../../shared/user.model';
 
 @Component({
   selector: 'app-menu-header',
@@ -10,9 +9,10 @@ import { UserModel } from '../../shared/user.model';
 })
 export class MenuHeaderComponent extends BaseComponent implements OnInit {
   public headerTitle: string = 'My Portfolio';
-  constructor(public user: UserModel, private route: Router) { 
+
+  constructor( private route: Router) { 
     super();
-    this.user = JSON.parse(localStorage.getItem('user'));
+
   }
 
   ngOnInit() {

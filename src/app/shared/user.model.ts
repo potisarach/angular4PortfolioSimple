@@ -1,6 +1,3 @@
-import { Injectable } from '@angular/core';
-
-@Injectable()
 export class UserModel {
 
   public userId: string;
@@ -15,4 +12,6 @@ export class UserModel {
   public address: string;
   public roleId: string;
   public isactive: string;
+
+
 }

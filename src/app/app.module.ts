@@ -21,6 +21,7 @@ import { SkillsComponent } from './main/skills/skills.component';
 import { SkillsFormComponent } from './main/skills/skills-form/skills-form.component';
 import { WorkexperienceFormComponent } from './main/workexperience/workexperience-form/workexperience-form.component';
 import { UserModel } from './shared/user.model';
+import { UserService } from './shared/user.service';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,7 @@ import { UserModel } from './shared/user.model';
     AppRoutingModule,
     HttpModule
   ],
-  providers: [UserModel, AuthGuard],
+  providers: [UserService, AuthGuard],
   
   bootstrap: [AppComponent]
 })

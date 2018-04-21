@@ -10,7 +10,7 @@ declare var $:any;
 export class SkillsComponent extends BaseComponent implements OnInit {
 
   public action: string;
-  constructor(public user: UserModel) {
+  constructor() {
     super();
    }
 

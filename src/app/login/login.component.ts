@@ -4,6 +4,7 @@ import { Http, RequestOptions, Headers } from "@angular/http";
 import 'rxjs/add/operator/map'
 import { BaseComponent } from '../baseComponent';
 import { UserModel } from '../shared/user.model';
+import { UserService } from '../shared/user.service';
 declare var bootbox:any;
 @Component({
   selector: 'app-login',
@@ -14,7 +15,7 @@ export class LoginComponent extends BaseComponent implements OnInit {
   private loginPath = this._CONF.SERVER_API + 'login';
   public username: string;
   public password: string;;
-  constructor(public user: UserModel, private http: Http,  private route: Router) {
+  constructor(public userService: UserService, private http: Http,  private route: Router) {
     super();
    }
 
@@ -40,7 +41,7 @@ export class LoginComponent extends BaseComponent implements OnInit {
 
   saveStorage(data){
     console.log("LOGIN RETURN",data)
-    this.user = data; 
+    this.userService.data.next(data);
     let dataUser = JSON.stringify(data);
     localStorage.setItem('isLoggedin', 'true');
     localStorage.setItem('user', dataUser);

@@ -12,7 +12,7 @@ export class SkillsFormComponent extends BaseComponent implements OnInit {
   @Input() action: string;
   public skill_name: string;
 
-  constructor(public user: UserModel) { 
+  constructor() { 
     super();
 
     this.skill_name = "MVC";
